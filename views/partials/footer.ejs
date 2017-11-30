@@ -1,0 +1,111 @@
+<footer>
+    <div class="container_12">
+        <div class="grid_6 fontup">
+           <i class="fa fa-phone-square" aria-hidden="true"></i>  Atendimento: (35) 3449-4039
+        </div>
+        <div class="grid_6">
+            <SCRIPT LANGUAGE="JAVASCRIPT">
+                var now = new Date();
+                var mName = now.getMonth() + 1;
+                var dName = now.getDay() + 1;
+                var dayNr = now.getDate();
+                var yearNr = now.getYear();
+                if (dName == 1) {
+                    Day = "Domingo";
+                }
+                if (dName == 2) {
+                    Day = "Segunda-feira";
+                }
+                if (dName == 3) {
+                    Day = "Terça-feira";
+                }
+                if (dName == 4) {
+                    Day = "Quarta-feira";
+                }
+                if (dName == 5) {
+                    Day = "Quinta-feira";
+                }
+                if (dName == 6) {
+                    Day = "Sexta-feira";
+                }
+                if (dName == 7) {
+                    Day = "Sábado";
+                }
+                if (mName == 1) {
+                    Month = "Janeiro";
+                }
+                if (mName == 2) {
+                    Month = "Fevereiro";
+                }
+                if (mName == 3) {
+                    Month = "Março";
+                }
+                if (mName == 4) {
+                    Month = "Abril";
+                }
+                if (mName == 5) {
+                    Month = "Maio";
+                }
+                if (mName == 6) {
+                    Month = "Junho";
+                }
+                if (mName == 7) {
+                    Month = "Julho";
+                }
+                if (mName == 8) {
+                    Month = "Agosto";
+                }
+                if (mName == 9) {
+                    Month = "Setembro";
+                }
+                if (mName == 10) {
+                    Month = "Outubro";
+                }
+                if (mName == 11) {
+                    Month = "Novembro";
+                }
+                if (mName == 12) {
+                    Month = "Dezembro";
+                }
+                if (yearNr < 2000) {
+                    Year = 1900 + yearNr;
+                } else {
+                    Year = yearNr;
+                }
+                var todaysDate = (" " + Day + ", " + dayNr + "/" + Month + "/" + Year);
+
+                document.write('  ' + todaysDate);
+            </SCRIPT>
+            <SPAN ID="Clock">00:00:00</SPAN>
+            <SCRIPT LANGUAGE="JavaScript">
+                var Elem = document.getElementById("Clock");
+                function Horario() {
+                    var Hoje = new Date();
+                    var Horas = Hoje.getHours();
+                    if (Horas < 10) {
+                        Horas = "0" + Horas;
+                    }
+                    var Minutos = Hoje.getMinutes();
+                    if (Minutos < 10) {
+                        Minutos = "0" + Minutos;
+                    }
+                    var Segundos = Hoje.getSeconds();
+                    if (Segundos < 10) {
+                        Segundos = "0" + Segundos;
+                    }
+                    Elem.innerHTML = Horas + ":" + Minutos + ":" + Segundos;
+                }
+                window.setInterval("Horario()", 1000);
+            </SCRIPT>
+        </div>
+    </div>
+</footer>
+
+<script type="text/javascript" src="/script/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="/script/jquery.mask.min.js"></script>   
+<script type="text/javascript" src="/script/script.js"</script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="/Bootstrap_4.0/js/bootstrap.min.js"></script> 
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Controle de transporte" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /> -->
+    <link rel="stylesheet" href="/CSS/960.css">
+    <link rel="stylesheet" href="/CSS/reset.css">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="/CSS/font-awesome.css">
+    <script type="text/javascript" src="/script/script.js"></script>
+</head>
+<body class="bgpage">
+    <header>
+        <div class="container_12">
+            <a href="http://www.pousoalegre.mg.gov.br/" target="_blank"> <img src="/img/logoboa.png" class="logo" alt="logo"> </a>
+            <div class="grid_4 prefix_5">
+                <ul>
+                    <% if('user' in locals)  { %>
+                    <li><a href="/home">Home</a></li>   
+                    <li><a href="/logout">Sair</a></li>
+                </ul>
+            </div>
+            <div class="grid_3"> 
+                    <% if(locals.user.papel.length > 1) { %>                            
+                        <form method="post" class="change" action="/changeRole" onChange="this.submit()">
+                            <select name="role" class="typetext">
+                                <% locals.user.papel.forEach(content => { %>
+                                    <option <%if (content == locals.papel) { %>selected <%}%>><%= content %></option>
+                                    <% }) %>
+                            </select>
+                    </form>
+                 <% } %>
+                    <%}%>              
+            </div>
+        </div>
+    </header>

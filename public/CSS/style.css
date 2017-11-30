@@ -1,0 +1,491 @@
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body {
+    /*background: ;
+	color: ;
+	*/
+    font-size: 100%;
+    line-height: 1.25;
+    font-family: 'Lato', Arial, sans-serif;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+a {
+    color: #9baaa7;
+    text-decoration: none;
+    outline: none;
+}
+
+a:hover,
+a:focus {
+    color: rgb(29, 17, 194);
+    ;
+}
+
+
+/* change colours to suit your needs */
+
+ins {
+    background-color: #ff9;
+    color: #000;
+    text-decoration: none;
+}
+
+
+/* change colours to suit your needs */
+
+mark {
+    background-color: #ff9;
+    color: #000;
+    font-style: italic;
+    font-weight: bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* change border colour to suit your needs */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #cccccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+input,
+select {
+    vertical-align: middle;
+}
+
+
+/* MY CODE */
+
+.bgpage {
+    background-image: url('/img/bg.png');
+}
+
+.content {
+    background-color: rgba(255, 255, 255, 0.75);
+    border-bottom: 3px solid rgb(29, 17, 194);
+    border-top: 3px solid rgb(29, 17, 194);
+    margin: 40px;
+    padding: 40px;
+    height: 100%;
+    border-left: 2px solid #3a3738;
+    border-right: 2px solid #3a3738;
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.75);
+    width: 100%;
+    padding-top: 20px;
+    border-bottom: 3px solid rgb(29, 17, 194);
+    height: 65px;
+    position: relative;
+    font-size: 20px;
+}
+
+header ul {
+    margin-top: 15px;
+}
+
+header ul li {
+    display: inline-block !important;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    margin: 10px;
+    transition: 1s;
+}
+
+header ul li a:hover {
+    transition: 0.5s;
+    color: rgb(29, 17, 194);
+}
+
+footer {
+    background-color: rgba(255, 255, 255, 0.75);
+    border-top: 3px solid rgb(29, 17, 194);
+    height: 23px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin: 0 auto;
+}
+
+footer .fontup {
+    font-size: 18px;
+}
+
+.logo {
+    width: 275px;
+    float: left;
+    position: absolute;
+    transition: 0.5s;
+}
+
+.logo:hover {
+    width: 310px;
+    transition: 0.5s;
+}
+
+.ola p {
+    font-size: 30px;
+    color: rgb(29, 17, 194);
+}
+
+.ola p span {
+    font-weight: bold;
+}
+
+.btnhome {
+    background: #272829;
+    font-family: Arial;
+    color: #ffffff;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    width: 31%;
+    height: 125px;
+    font-size: 35px;
+    margin: 8px;
+    border-radius: 30px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.btnhome:hover {
+    background: rgb(5, 0, 66);
+    text-decoration: none;
+}
+
+.btnhome span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.btnhome span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.btnhome:hover span {
+    padding-right: 25px;
+}
+
+.btnhome:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.btnsingin {
+    height: 55px;
+    font-size: 30px;
+}
+
+.typetext {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 3px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.typetext:focus {
+    border: 2px solid #555;
+}
+
+h2 {
+    font-size: 50px;
+    margin: auto;
+    color: rgb(29, 17, 194);
+}
+
+.alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
+
+.change {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 2px 0;
+    margin-top: -13px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.change:focus {
+    border: 2px solid #555;
+}
+
+.form {
+    width: 33%;
+    padding: 12px 20px;
+    margin: 3px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form:focus {
+    border: 2px solid #555;
+}
+
+.form100 {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 3px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form100:focus {
+    border: 2px solid #555;
+}
+
+textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 3px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form25 {
+    width: 24%;
+    padding: 12px 20px;
+    margin: 3px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form25:focus {
+    border: 2px solid #555;
+}
+
+.form50 {
+    width: 49.7%;
+    padding: 12px 20px;
+    margin: 3px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form50:focus {
+    border: 2px solid #555;
+}
+
+.checkbox {
+    width: 22px;
+    height: 22px;
+    margin: -2px 10px 0 0;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.font {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+@keyframes animacao_sucesso {
+    0% {
+        position: relative;
+        left: -90px
+    }
+    100% {
+        position: relative;
+        left: 800px
+    }
+}
+
+.esconde {
+    transition: 2s;
+    display: none;
+}
+
+.cadastro_sucesso {
+    background-color: rgb(2, 56, 2);
+    width: 260px;
+    padding: 10px;
+    color: #f1f1f1;
+    animation-name: animacao_sucesso;
+    animation-duration: 5s;
+    border-radius: 20px;
+    border: 1px solid #fff;
+}
+
+.error {
+    border: 1px solid red;
+    outline: 0;
+}
+
+.error:focus {
+    border: 1px solid red;
+    outline: 0 !important;
+}

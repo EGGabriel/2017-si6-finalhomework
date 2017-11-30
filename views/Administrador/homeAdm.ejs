@@ -1,0 +1,21 @@
+<% include ../partials/header %>
+    <div class="container">
+        <div class="content">
+            <div class="container_12">
+                <div class="ola">
+                    <div class="grid_12">
+                        <p><span>Olá,</span>
+                            <%= locals.user.name %> logado como [
+                                <%=locals.papel %> ] você deseja:
+                        </p>
+                    </div>
+                    <div class="grid_12">
+                        <a href="adm/cadastrar"><button class="btnhome" type="submit"> <span>Cadastrar</span> </button></a>
+                        <a href="adm/consultar"><button class="btnhome" type="submit"> <span>Consultar</span> </button></a>
+                        <a href="adm/relatorios"><button class="btnhome" type="submit"> <span>Relatórios</span> </button></a>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </div>
+<% include ../partials/footer %>

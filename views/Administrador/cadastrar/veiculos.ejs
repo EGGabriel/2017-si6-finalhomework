@@ -1,0 +1,27 @@
+<% include ../../partials/header %>
+    <div class="container">
+        <div class="content">
+            <div class="container_12">
+                <h2>Cadastrar Veículos</h2>
+                <form method="post">
+                <input type="text" maxlength="8" name="placa"  class="form" placeholder="Placa" required autofocus>
+                <input type="text" name="frota" class="form" placeholder="Frota" required autofocus>
+                <input type="text" name="modelo" class="form" placeholder="Modelo" required autofocus>
+                <input type="text" name="ano" class="form" placeholder="Ano" required autofocus>
+                <input type="text" name="capacidade"  class="form" placeholder="Capacidade" required autofocus>
+                <input type="text" name="renavam"  class="form" placeholder="Renavam" required autofocus>
+                <input type="text" name="chassi"  class="form" placeholder="Chassi" required autofocus>
+                <label for="idVencimento" class="form" >Data do vencimento da inspeção: </label>
+                <input type="text" name="vencimento_inspecao"  class="form" placeholder="Inspeção Veicular Vencimento" onkeyup="
+                    var v = this.value;
+                    if (v.match(/^\d{2}$/) !== null) {
+                        this.value = v + '/';
+                    } else if (v.match(/^\d{2}\/\d{2}$/) !== null) {
+                        this.value = v + '/';
+                    }" maxlength="10" required autofocus>
+                <button class="btnhome btnsingin typetext" type="submit"> <span>Enviar</span></button>
+                </form>
+            </div>       
+        </div>        
+    </div>
+<% include ../../partials/footer %>

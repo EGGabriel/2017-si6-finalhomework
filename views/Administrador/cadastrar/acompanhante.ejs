@@ -1,0 +1,25 @@
+<% include ../../partials/header %>
+    <div class="container">
+        <div class="content">
+            <div class="container_12">
+                <form method="post">
+                    <h2>Cadastrar Acompanhante</h2>
+                    <input type="text" name="nome" id="idNome" class="form" placeholder="Nome" required autofocus>
+                    <input type="text" name="celular" id="idCelular" class="form" placeholder="Celular" required autofocus maxlength="11">
+                    <input type="text" name="parentesco" id="idParentesco" class="form" placeholder="Parentesco" required autofocus>
+                    <input type="text" name="rua" id="idRua" class="form" placeholder="Rua" required autofocus>
+                    <input type="text" name="numero" id="idNumero" class="form" placeholder="Numero" required autofocus>
+                    <input type="text" name="bairro" id="idBairro" class="form" placeholder="Bairro" required autofocus>
+                    <input id="aluno" list="alunos" class="form" name="alunos" placeholder="Informe o nome do Aluno">
+                    <datalist id="alunos">
+                        <% alunos.forEach(content => { %>
+                            <input type="text" name="id" value="<%=content.id%>" hidden>
+                            <option value="<%=content.nome%>"></option>
+                       <% }) %>
+                    </datalist> 
+                    <button class="btnhome btnsingin typetext" type="submit"> <span>Enviar</span></button>  
+                </form>     
+            </div>
+        </div>        
+    </div>
+<% include ../../partials/footer %>

@@ -1,0 +1,51 @@
+<% include ../../partials/header %>
+    <div class="container">
+        <div class="content">
+            <div class="container_12">
+                <h2>Cadastrar Responsáveis</h2>
+                <form method="post" onsubmit="return verificarCampo(this)">
+                <input type="text" name="nome" id="idNome" class="form" placeholder="Nome" required autofocus />
+                <input type="text" name="celular01" id="idCelular01" class="form cel" placeholder="Telefone/Celular 01" required autofocus />
+                <input type="text" name="celular02" id="idCelular02" class="form cel" placeholder="Telefone/Celular 02" required autofocus />
+                <input type="text" name="cpf" id="idCpf" class="form" placeholder="CPF" required autofocus />
+                <select class="form" name="parentesco">
+                    <option selected>Pais</option>   
+                    <option>Avós</option>
+                    <option>Irmãos</option>
+                    <option>Tios</option>
+                    <option>Outros</option>
+                </select>
+                <div>
+                <h3>Endereço</h3>
+                    <input placeholder="Informe bairro" type="text" required class="form" name="bairro"/>
+                    <input name="rua" placeholder="Rua" type="text" required class="form"/>
+                    <input name="numero" placeholder="Número" type="text" required class="form"/>
+                </div>
+
+                <div class="partAlunos">
+                   <h3>Escolha o aluno</h3>
+                   <div id="campoAluno"> 
+                    
+                    <input required type="text" class="form alunos" name="nome_aluno[]" maxlength="100" id="idAluno" placeholder="Escolha o Aluno" list="alunos" class="form campoAluno"/>
+                    
+                    <datalist id="alunos">
+                        <option class="opcoes"></option>
+                    </datalist>
+                    <div class="mensagemError0">
+                        <h4></h4>
+                    </div>
+                    </div>
+                </div>
+
+                <button class="btnhome btnsingin typetext" type="submit"> <span>Enviar</span></button>
+                </form>
+                <button class="form100" id="botaoAdicionar">Adicionar Alunos</button>
+            </div>
+            </div>       
+        </div>        
+  
+
+ <script type="text/javascript" src="/script/jquery-3.2.1.min.js"></script>
+ <script type="text/javascript" src="/script/jquery.mask.min.js"></script>
+ <script type="text/javascript" src="/script/responsavel.js"></script>   
+<% include ../../partials/footer %>

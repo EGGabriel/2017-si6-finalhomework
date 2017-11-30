@@ -1,0 +1,134 @@
+<% include ../../partials/header %>
+    <div class="container">
+        <div class="content">
+            <div class="container_12">
+                <h2>Cadastrar Aluno</h2>
+                <hr />
+                <h3>Informações do Aluno</h3>
+                <form method="post" id="formulario_aluno">
+                <input type="text" name="nome_aluno" class="form" placeholder="Nome" required autofocus>
+                <input type="text" name="nascimento" class="form classNascimento" placeholder="Data de Nascimento" maxlength="10" id="idNascimento" autofocus required>
+               <div>
+               <hr />
+                    <h3>Endereço</h3>
+                    <input class="form" type="text" name="bairro" list="bairros" class="form" placeholder="Informe o bairro" required autofocus maxlength="30">
+                     <datalist id="bairros">
+                            <%  bairros.forEach(content => { %>
+                                <option><%= content %></option>
+                            <% }) %>
+                     </datalist>
+                <input type="number" max="10000" min="0" name="numero_casa" class="form" placeholder="Número de residência"/>
+                <input type="text" name="rua" class="form" placeholder="Nome da rua"/>
+                
+                </div>
+                <div>
+                <hr />
+                    <h3>Endereço de embarque</h3>
+                    <input class="form" type="text" name="bairro_embarque" list="bairros" class="form" placeholder="Informe o bairro de embarque" required autofocus maxlength="30">
+                     <datalist id="bairros">
+                            <%  bairros.forEach(content => { %>
+                                <option><%= content %></option>
+                            <% }) %>
+                     </datalist>
+                <input type="text" name="rua_embarque" class="form" placeholder="Nome da rua ou ponto de referência"/>
+                
+                </div>
+                <div>
+                    <hr />
+                    <h3>Endereço de desembarque</h3>
+                    <input class="form" type="text" name="bairro_desembarque" list="bairros" class="form" placeholder="Informe o bairro de desembarque" required autofocus maxlength="30">
+                        <datalist id="bairros">
+                            <%  bairros.forEach(content => { %>
+                                <option><%= content %></option>
+                            <% }) %>
+                        </datalist>
+                    <input type="text" name="rua_desembarque" class="form" placeholder="Nome da rua ou ponto de referência"/>
+                </div>
+
+                <div>
+                <hr />
+                <h3>Informações da escola</h3>
+                <select class="form" name="serie">
+                <option value="inicial">Inicial</option>
+                <option value="primero_ano">1º ano</option>
+                <option value="segundo_ano">2º ano</option>
+                <option value="terceiro_ano">3º ano</option>
+                <option value="quarto_ano">4º ano</option>
+                <option value="quinto_ano">5º ano</option>
+                <option value="sexto_ano">6º ano</option>
+                <option value="setimo_ano">7º ano</option>
+                <option value="oitavo_ano">8º ano</option>
+                <option value="nono_ano">9º ano</option>
+                </select>
+                <input type="text" name="classe" class="form" placeholder="Classe" required autofocus>
+              
+                              
+                <select class="form" name="turno">
+                    <option>Manhã</option>
+                    <option>Tarde</option>
+                    <option>Noite</option>  
+                </select>
+                <input type="text" name="escola" list="escolas" class="form" placeholder="Escola/Instituição" required autofocus>
+                 <datalist id="escolas">
+                        <% escola.forEach(content => { %>
+                            <option><%=content.nome%></option>
+                       <% }) %>
+                    </datalist>
+              
+             
+                 <input id="carro" list="veiculos" class="form" name="veiculo_ida" placeholder="Veículo de ida: ">
+                    <datalist id="veiculos">
+                        <% veiculo.forEach(content => { %>
+                            <option><%=content.placa%></option>
+                       <% }) %>
+                    </datalist>
+                    <input id="carro_volta" list="veiculos" class="form" name="veiculo_volta" placeholder="Veículo de volta: ">
+                    <datalist id="veiculos">
+                        <% veiculo.forEach(content => { %>
+                            <option><%=content.placa%></option>
+                       <% }) %>
+                    </datalist>     
+                <textarea data-ls-module="charCounter" maxlength="200" placeholder="Observação"></textarea>
+               </div> 
+
+            <!-- Responsável -->
+            <hr />
+            <h3>Escolha/Cadastre Responsável</h3>
+                <input type="text" name="idResponsavel" id="choice" style="display: block autocomplete="off" list="responsaveis" class="form100" placeholder="Responsaveis" autofocus>
+                 <datalist id="responsaveis">
+                        <% responsaveis.forEach(content => { %>
+                            <option value="<%=content.id%>" hidden><%=content.nome%></option>
+                       <% }) %>
+                    </datalist>
+
+                <div id="formu_responsavel" style="display: none"> 
+                <div id="form_respon">
+                <input type="text" name="nome[]" id="idNome" class="form" placeholder="Nome"  autofocus>
+                <input type="text" name="celular01[]" id="idCelular01" class="form classCelular01" placeholder="Telefone/Celular 01" autofocus>
+                <input type="text" name="celular02[]" id="idCelular02" class="form classCelular02" placeholder="Telefone/Celular 02"  autofocus>
+                <input type="text" name="cpf[]" id="idCpf" class="form classCpf" placeholder="CPF"  autofocus>
+                <select class="form" name="parentesco[]">
+                    <option selected>Pais</option>
+                    <option>Avós</option>
+                    <option>Irmãos</option>
+                    <option>Tios</option>
+                    <option>Outros</option>
+                </select>
+                <input type="text" name="endereco[]" id="idEndereco" class="form" placeholder="Endereço" autofocus>
+                <hr />
+                </div>
+                </div>
+                <button class="btnhome btnsingin typetext" type="submit"> <span>Enviar</span></button>
+                </form>
+                <button class="btnhome btnsingin typetext" onclick="duplicarForm()">Adicionar Novo Responsável</button>
+            </div>       
+        </div>        
+    </div>
+
+
+<script type="text/javascript" src="/script/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="/script/jquery.mask.min.js"></script>   
+<script type="text/javascript" src="/script/alunos.js"></script>   
+
+
+<% include ../../partials/footer %>

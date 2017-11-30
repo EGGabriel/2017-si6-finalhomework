@@ -1,0 +1,21 @@
+<% include ../../partials/header %>
+    <div class="container">
+        <div class="content">
+            <div class="container_12">
+            <form method="post">
+                    <h2>Cadastrar Rota</h2>
+                    <input type="text" name="Bairros" id="idNome" class="form" placeholder="Nome" required autofocus>
+                    <input type="text" name="celular" id="idCelular" class="form" placeholder="Celular" required autofocus maxlength="11">
+                    <input id="veiculo" list="veiculos" class="form" name="veiculos" placeholder="Informe a placa do veículo">
+                    <datalist id="veiculos">
+                        <% veiculos.forEach(content => { %>
+                            <input type="text" name="id" value="<%=content.id%>" hidden>
+                            <option value="<%=content.placa%>"></option>
+                       <% }) %>
+                    </datalist> 
+                    <button class="btnhome btnsingin typetext" type="submit"> <span>Enviar</span></button>
+                </div>  
+            </form>     
+        </div>        
+    </div>
+<% include ../../partials/footer %>

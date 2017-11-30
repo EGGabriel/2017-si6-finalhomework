@@ -1,0 +1,35 @@
+<% include ../../partials/header %>
+    <div class="container">
+        <div class="content">
+            <div class="container_12">
+                <form method="post">
+                    <h2>Cadastrar Motorista</h2>
+                    <input type="text" name="nome" class="form" placeholder="Nome" required autofocus>
+                    <input type="text" name="nascimento" class="form" placeholder="Data de Nascimento" onkeyup="
+                        var v = this.value;
+                        if (v.match(/^\d{2}$/) !== null) {
+                            this.value = v + '/';
+                        } else if (v.match(/^\d{2}\/\d{2}$/) !== null) {
+                            this.value = v + '/';
+                        }" maxlength="10" autofocus required>
+                    <input type="text" name="endereco" class="form" placeholder="Endereço" required autofocus>
+                    <input type="text" name="telefone" class="form" placeholder="Telefone/Celular" required autofocus maxlength="14">
+                    <input type="text" name="cnh" class="form" placeholder="CNH" required autofocus maxlength="11">
+                    <input type="text" name="cpf" class="form" placeholder="CPF" required autofocus maxlength="14">
+                    <input type="text" name="vencimento" class="form" placeholder="Vencimento da CNH" onkeyup="
+                        var v = this.value;
+                        if (v.match(/^\d{2}$/) !== null) {
+                            this.value = v + '/';
+                        } else if (v.match(/^\d{2}\/\d{2}$/) !== null) {
+                            this.value = v + '/';
+                        }" maxlength="10">
+                    <input type="text" name="matricula" class="form" placeholder="Matricula" required autofocus>
+                    <br>
+                    <input type="text" name="username" class="form50" placeholder="Username" required autofocus>
+                    <input type="password" name="senha" class="form50" placeholder="Password" required autofocus>
+                    <button class="btnhome btnsingin typetext" type="submit"> <span>Enviar</span></button>
+                </form>    
+            </div>       
+        </div>        
+    </div>
+<% include ../../partials/footer %>

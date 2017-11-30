@@ -1,0 +1,21 @@
+<% include ../../partials/header %>
+    <div class="container">
+        <div class="content">
+            <div class="container_12">
+                <h2>Cadastrar Escolas/Instituições</h2>
+                <form method="post">
+                <input type="text" name="nome" id="" class="form" placeholder="Nome" required autofocus>
+                <input type="text" name="rua" id="" class="form" placeholder="Rua" required autofocus>
+                <input type="text" name="bairro" id="" class="form" placeholder="Bairro" required autofocus>
+                <input type="text" name="telefone" id="" class="form" placeholder="Telefone" required autofocus>
+                <input type="text" name="contato" id="" class="form" placeholder="Contato" required autofocus><br />
+                <label for="ID_hora_inicio"> Hora de inicio:   </label>
+                <input class="form" required autofocus type="time" name ="horario_inicio" id = "ID_hora_inicio"/>
+                <label for="ID_hora_fim"> Hora de termino:   </label>  
+                <input class="form" required autofocus type="time" name ="horario_final" id = "ID_hora_fim"/>
+                <button class="btnhome btnsingin typetext" type="submit"> <span>Enviar</span></button>
+                </form>
+            </div>       
+        </div>        
+    </div>
+<% include ../../partials/footer %>
